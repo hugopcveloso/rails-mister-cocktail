@@ -1,8 +1,12 @@
 <h1 class = 'title m-3'> List of Cocktails </h1>
+</br>
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <div class="card p-4">
+    <div class="card mt-3 p-4 round">
       <li> Name: <%= cocktail.name %> <%= link_to "Show", cocktail %></li>
     </div>
   <% end %>
+
 </ul>
+
+  <p class = 'font-weight-bold'> <%= link_to "+ Add a new cocktail", 'cocktails/new' %> </p>

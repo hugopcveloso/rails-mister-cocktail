@@ -7,7 +7,35 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Akronim|Didact+Gothic|Lobster|Monoton|Open+Sans|Open+Sans+Condensed:300&display=swap');
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/navbar";
+
+li {
+  list-style: none;
+  font-family: 'Didact Gothic'
+}
+body {
+  background: #lightblue;
+}
+h1{
+  font-family: 'Lobster';
+}
+.container {
+  background-color: white;
+  box-shadow: 3px 4px 8px lightgrey;
+  border-radius: 10px;
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.card {
+  align: left;
+}
+
+
