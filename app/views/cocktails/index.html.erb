@@ -1,0 +1,8 @@
+<h1 class = 'title m-3'> List of Cocktails </h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <div class="card p-4">
+      <li> Name: <%= cocktail.name %> <%= link_to "Show", cocktail %></li>
+    </div>
+  <% end %>
+</ul>

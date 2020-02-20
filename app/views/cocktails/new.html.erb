@@ -1,0 +1,11 @@
+<h2 class ='text-center'>Creating a new Cocktail</h2>
+
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.error_notification message: 'This is all wrong 🙅 try again ' %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name%>
+    <%= f.submit "Add a Cocktail", class: "btn btn-primary" %>
+  <% end %>
+<% end %>
