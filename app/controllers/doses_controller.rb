@@ -1,10 +1,6 @@
 class DosesController < ApplicationController
   before_action :find_dose, only: [:destroy]
-  before_action :find_cocktail, only: [:new, :create]
-
-  def new
-    @dose = Dose.new
-  end
+  before_action :find_cocktail, only: [ :create]
 
   def create
     @dose = Dose.new(dose_params)
@@ -12,13 +8,14 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to @cocktail, notice: 'Dose was successfully created.'
     else
-      render :new
+      render 'cocktail/show'
     end
   end
 
   def destroy
-    @dose.destroy
-    redirect_to cocktails_path
+    dose = @dose
+    dose.destroy
+    redirect_to cocktail_path(dose.cocktail)
   end
 
   private

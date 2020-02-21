@@ -7,8 +7,13 @@
     </div>
   <% end %>
 </ul>
+<br>
+<br>
+<div class="Review">
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add a dose", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<p> <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %> </p>
-</br>
-</br>
-<p> <%= link_to "Go back", cocktails_path , class: 'btn btn-primary' %> </p>
