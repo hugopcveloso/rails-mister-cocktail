@@ -8,7 +8,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to @cocktail, notice: 'Dose was successfully created.'
     else
-      render 'cocktail/show'
+      render @cocktail
     end
   end
 
@@ -31,6 +31,5 @@ class DosesController < ApplicationController
   def dose_params
     params.require(:dose).permit(:description, :ingredient_id)
   end
-
 
 end

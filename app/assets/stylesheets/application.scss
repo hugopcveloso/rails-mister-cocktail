@@ -19,15 +19,14 @@ li {
   font-family: 'Didact Gothic'
 }
 body {
-  background: #lightblue;
+  background: #fffdf7;
 }
-h1{
-  font-family: 'Lobster';
-}
+
 .container {
   background-color: white;
   box-shadow: 3px 4px 8px lightgrey;
   border-radius: 10px;
+  width:80%;
 }
 
 .round {
@@ -35,7 +34,69 @@ h1{
 }
 
 .card {
-  align: left;
+  font-size:20px;
+  background-color:#white;
+  font-weight:bold;
+  margin: 5px;
+  box-shadow: 2px 2px 2px #white;
+  height: 300px;
+    overflow: hidden;
+  a {
+    color: #050259;
+    font-family: 'Didact Gothic';
+  }
+}
+
+.card:hover {
+  background-color: #7C05F2;
+  box-shadow: 2px 2px 8px lightgrey;
+  a {
+    color: #050259;
+    font-size:21px;
+    text-decoration: none;
+  }
+}
+
+.banner-photo {
+  width:100%;
+  height:50%;
+  box-shadow: 5px 4px 8px #0B3142;
+  position:relative;
+}
+
+h1 {
+  font-family: 'Lobster';
+  color: #050259;
+  font-size: 40px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+
+}
+
+#logo-text {
+  font-family: 'Lobster';
+  font-size: 38px;
+  text-align: center;
+  color: black;
+}
+
+.cocktail-name {
+  font-family: 'Lobster';
+  font-size: 25px;
+  margin:10px;
+}
+
+.navbar {
+  position: fixed;
+  width:100%;
 }
 
 
+.card-ingredient {
+  box-shadow: 2px 2px 8px lightgrey;
+}
+
+.photo-in-show {
+  border-radius: 20px;
+}

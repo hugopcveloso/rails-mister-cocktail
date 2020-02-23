@@ -1,19 +1,35 @@
 
 <h1> Cocktail: <%= @cocktail.name %></h1>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <div class="card mt-3 p-4 round">
-      <li> <%= dose.description %> -> <%= dose.ingredient.name %> </li>
+  <div class="container p-5">
+    <div class="cocktail-card d-flex justify-content-between align-items-start">
+      <div class="list-doses align-self-start align-content-start">
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <div class="card-ingredient p-3 mb-2 round text-left">
+              <li> <%= dose.description %> -> <%= dose.ingredient.name %> </li>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+
+
+      <div class="photo-in-show round">
+        <% if @cocktail.photo.attached? %>
+          <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, radius:20, crop: :fill %>
+        <% else %>
+          <%= cl_image_tag 'vz2udx1knz1vdpabr19u', height: 300, width: 300, radius:20, crop: :fill %>
+        <% end %>
+      </div>
+
     </div>
-  <% end %>
-</ul>
-<br>
-<br>
-<div class="Review">
-  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit "Add a dose", class: "btn btn-primary" %>
-  <% end %>
+  <br>
+  <br>
+  <div class="ingredient-form">
+    <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add a dose", class: "btn btn-primary add-dose" %>
+    <% end %>
+  </div>
 </div>
 
