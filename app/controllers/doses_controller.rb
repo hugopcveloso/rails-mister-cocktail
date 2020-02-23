@@ -8,7 +8,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to @cocktail, notice: 'Dose was successfully created.'
     else
-      render @cocktail
+      render 'show'
     end
   end
 

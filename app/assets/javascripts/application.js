@@ -15,9 +15,3 @@
 //= require turbolinks
 //= require_tree .
 
-const button = document.querySelector('.add-dose');
-
-button.addEventListener('click', (event => {
-  console.log('This event');
-}));
-
