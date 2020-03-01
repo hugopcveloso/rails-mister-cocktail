@@ -1,24 +1,6 @@
-
-<h1 class = 'title'> List of Cocktails </h1>
-<div class="index-grid container-fluid">
-  <div class="row align-items-center justify-content-center">
-    <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-6 col-md-4">
-      <div class="card mt-3 p-4 round justify-content-center align-items-center">
-        <div class="card-cover mb-2">
-          <% if cocktail.photo.attached? %>
-            <%= cl_image_tag cocktail.photo.key, height: 200, width: 400, crop: :fill %>
-          <% else %>
-            <%= cl_image_tag 'vz2udx1knz1vdpabr19u', height: 200, width: 400, crop: :fill %>
-          <% end %>
-        </div>
-          <div class="text-center">
-            <%= link_to cocktail.name, cocktail %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+<div class = 'm-3'>
+  <%= render 'shared/list' %>
 </div>
 
-  <p class = 'font-weight-bold'> <%= link_to "+ Add a new cocktail", 'cocktails/new' %> </p>
+
+

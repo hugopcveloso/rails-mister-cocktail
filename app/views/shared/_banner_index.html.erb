@@ -1,3 +1,5 @@
-<div class="photo-container">
-  <%= cl_image_tag("assorted-wine-bottles-1283219_axufgl.jpg", height:500, :aspect_ratio=>"40:9", effect: 'grayscale' ,:crop=>"fill") %>
+<div class="photo-container bg-img-overlay">
+  <%= cl_image_tag("backgrounds-close-up-close-up-colors-572487_er0ldo.jpg", :transformation=>[
+  {:gravity=>"auto", width: 2200, height:600, crop: 'crop'},
+  ]) %>
 </div>

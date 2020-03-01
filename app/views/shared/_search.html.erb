@@ -1,0 +1,19 @@
+
+
+
+
+<div class="wrap">
+   <div class="search">
+      <%= form_tag root_path, method: :get, class: 'searchTerm form-inline d-flex flex-nowrap ' do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          style: "width: 400px",
+          placeholder: "Search cocktails by name or ingredient"
+        %>
+        <%= button_tag( type: 'submit', class: "searchButton") do %>
+          <i class="fa fa-search"></i>
+        <% end %>
+    <% end %>
+   </div>
+</div>
