@@ -1,0 +1,26 @@
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap:20px;
+}
+
+.grid-item {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  overflow:hidden;
+  .item-info {
+    display:flex;
+    justify-content: space-around;
+    margin: 15px 5px;
+    font-family: 'Didact Gothic';
+    font-weight: bold;
+    font-color: black;
+  }
+  .item-image {
+
+  }
+}

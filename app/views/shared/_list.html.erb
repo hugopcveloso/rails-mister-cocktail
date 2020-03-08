@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="grid-item">
+       <div class="item-image">
+          <% if cocktail.photo.attached? %>
+            <%= cl_image_tag cocktail.photo.key, height: 200, width: 400, crop: :fill %>
+          <% else %>
+            <%= cl_image_tag 'vz2udx1knz1vdpabr19u', height: 200, width: 400, crop: :fill %>
+          <% end %>
+          <div class="item-info">
+            <%= link_to cocktail.name, cocktail %>
+            <span><i class="fas fa-tasks"></i> <%= cocktail.ingredients.size %> </span>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
